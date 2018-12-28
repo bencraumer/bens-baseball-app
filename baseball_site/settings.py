@@ -25,7 +25,7 @@ SECRET_KEY = 'v@+1j6%k@t7g@yurjqw-g93x8z(^h*hbmj+9l7=&(^np_e1+$7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['bens-baseball-app.herokuapp.com']
 
 
 # Application definition
