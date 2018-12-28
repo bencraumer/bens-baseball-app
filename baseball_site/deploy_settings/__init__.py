@@ -8,6 +8,8 @@ ALLOWED_HOSTS = [
     '.herokuapp.com',
 ]
 
+SECRET_KEY = get_env_variable("SECRET_KEY")
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
