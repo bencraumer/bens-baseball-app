@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ team.name }}{% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{ team.name }}</h2>
+    {{ team.record }}
+
+    <section>
+        {% for player in team.player_set.all %}
+            <h3><a href="{% url 'players:player_detail' team_pk=player.team.pk player_pk=player.pk %}">{{ player.name }}</a></h3>
+            {{ player.bio|linebreaks }}
+        {% endfor %}
+    </section>
+
+</article>
+{% endblock %}

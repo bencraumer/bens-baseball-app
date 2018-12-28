@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}All Teams{% endblock %}
+
+{% block content %}
+<div class="cards">
+    {% for team in teams %}
+    <div class="card">
+        <header><a href="{% url 'players:player_list' pk=team.pk %}">{{ team.name }}</a></header>
+        <div class="card-copy">
+            {{ team.record }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

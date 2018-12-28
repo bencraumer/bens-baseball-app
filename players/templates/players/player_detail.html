@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ player.name }} - {{ player.team.name }}{% endblock %}
+
+{% block content %}
+<article>
+    <h2><a href="{% url 'players:player_list' pk=player.team.pk %}">{{ player.team.name }}</a></h2>
+    <h3>{{ player.name }}</h3>
+    {{ player.hits|linebreaks }}
+</article>
+{% endblock %}
