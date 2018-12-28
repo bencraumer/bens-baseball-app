@@ -6,6 +6,15 @@
 <article>
     <h2><a href="{% url 'players:player_list' pk=player.team.pk %}">{{ player.team.name }}</a></h2>
     <h3>{{ player.name }}</h3>
-    {{ player.hits|linebreaks }}
+    <p>Positions: {{ player.positions }}</p>
+    <p>Bats: {{ player.bats }}</p>
+    <p>Throws: {{ player.throws }}</p>
+    <p>Bio: {{ player.bio }}</p>
+    <p>Hits: {{ player.hits }}</p>
+    <p>HR: {{ player.hr }}</p>
+    <p>RBI: {{ player.rbi }}</p>
+    <p>OBP: {{ player.obp }}</p>
+    <p>SLG: {{ player.slg }}</p>
+    <p>OPS: {{ player.ops }}</p>
 </article>
 {% endblock %}
